@@ -1,0 +1,316 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+    font-size: 62.5%;
+    background-color: rgb(130, 165, 196);
+    text-align: justify;
+}
+
+img {
+    margin: auto;
+    display: block;
+}
+
+.encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.airpodsslogan {
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: aqua;
+}
+
+a {
+    text-decoration: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.flexbox nav ul li {
+    display: inline-block;
+    font-size: 1.4rem
+}
+
+main {
+    font-size: 18px;
+}
+
+.listado {
+    display: flex;
+    gap: 20px;
+    border-style: ridge;
+    border-width: 10px;
+}
+
+.airpods {
+    margin: 2px;
+    padding: 0px;
+    filter: brightness(0.9);
+}
+
+h2 {
+    color: rgb(71, 49, 112);
+    font-size: 22px;
+    text-align: center;
+    border-bottom: ridge;
+    border-color: brown;
+}
+
+h3 {
+    color: brown;
+    font-size: 22px;
+    text-align: center;
+}
+
+h4 {
+    color: rgb(223, 17, 2);
+    font-size: 16px;
+    text-align: center;
+}
+
+footer section nav div {
+    display: inline-block;
+    list-style: none;
+}
+
+footer {
+    margin-top: 20px;
+    border: dotted 1px rgb(0, 183, 255);
+    border-radius: 10%;
+}
+
+.footercaja {
+    text-align: center;
+}
+
+.ipadpic {
+    height: 180px;
+    width: 260px;
+    margin: auto;
+    display: block;
+    padding-bottom: 15px;
+}
+
+.grid {
+    display: grid;
+    list-style: none;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#fotosiphone * {
+    max-width: 100%;
+    height: auto;
+}
+
+#fotosairpods * {
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    height: 250px;
+    background-image: url(mundoapple.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.transform {
+    transform: rotate(-45deg);
+}
+
+.transform2 {
+    transform: rotate(-45deg);
+    transition: transform 2.5s, width 0.5s, height 0.5s;
+}
+
+.transform2:hover {
+    transform: rotate(360deg);
+    transition: transform 5.5s;
+    cursor: grab;
+}
+
+.transform3 {
+    transform: rotate(0deg);
+}
+
+.transform3:hover {
+    transform: rotate(360deg);
+    transition: all 5s cubic-bezier(1, 2, 1, 10);
+    cursor: no-drop;
+}
+
+.grid .transform4 {
+    transform: scale(1);
+    cursor: none;
+}
+
+.grid .transform4:hover {
+    transform: scale(1.2);
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+    align-content: center;
+    border-radius: 5px;
+}
+
+.grid2 h2 {
+    font-size: 17px;
+    color: black;
+}
+
+.grid2 ul li{
+list-style: none;
+}
+
+.footer {
+    font-size: 20px;
+    font-family: Arial;
+    letter-spacing: 5px;
+}
+
+/*ANIMATIONS*/
+
+.shadow-pop-tr {
+    margin-top: 10px;
+	        animation: shadow-pop-tr 0.3s cubic-bezier(0.470, 0.000, 0.745, 0.715) both;
+}
+
+ @keyframes shadow-pop-tr {
+    0% {
+              box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+              transform: translateX(0) translateY(0);
+    }
+    100% {
+              box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e, 4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e, 8px -8px #3e3e3e;
+              transform: translateX(-8px) translateY(8px);
+    }
+  }
+
+  .scale-in-center {
+	        animation: scale-in-center 3s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+}
+ @keyframes scale-in-center {
+    0% {
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+
+/*--MEDIA QUERIES*/
+  
+@media (max-width: 1024px) {
+    body {
+        background-color: black;
+        color: blanchedalmond;
+        font-size: 20px
+    }
+
+    .titulo {
+        color: rgb(1, 2, 14);
+    }
+
+    #fotosiphone {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    #fotosairpods .grid .transform4 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-rows: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid2 h2 {
+        font-size: 17px;
+        color: rgb(105, 63, 63);
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        background-color: rgb(25, 158, 54);
+        color: rgb(68, 41, 2);
+        font-size: medium
+    }
+}
+
+#fotosiphone {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+
+#fotosairpods .grid .transform4 {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+}
+
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+@media (max-width: 576px) {
+    body {
+        background-color: rgb(41, 7, 134);
+        color: rgb(4, 141, 61);
+
+    }
+
+    #fotosiphone {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    #fotosairpods .grid .transform4 {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))
+    }
+
+    .grid2 {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+}

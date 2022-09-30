@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* declaracion inicial */
+            width: 100px;
+            height: 100px;
+            background: red;
+            transform: rotate(0);
+            /* El ALL indica que "está atento" a cualquier propiedad que cambie luego */
+            /* propiedad, tiempo, efecto, delay */
+            transition: all 5s cubic-bezier(1, 2, 1, 10);
+        }
+        div:hover {
+            /* que cambia al pasar el mouse */
+            width: 150px;
+            height: 150px;
+            transform: rotate(120deg);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+</body>
+</html>
